@@ -11,6 +11,11 @@
     <script src="script.js" defer></script>
 
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link
       rel="icon"
       href="./Images/IMG_0274-removebg-preview.png"
       type="image/png"
@@ -21,18 +26,32 @@
   <body>
     <main>
       <header class="w-full fixed bg-gray-200 h-auto flex flex-row">
-        <div>
+        <div class="flex items-center w-full justify-between px-2">
           <img
             class="h-20"
             src="./Images/IMG_0274-removebg-preview.png"
             alt="Logo-image"
           />
-          <ul class="cursor-pointer flex gap-4">
+
+          <!--Desktop Navigation-->
+          <ul class="cursor-pointer md:flex gap-4 md:block hidden">
             <li>About</li>
             <li>Services</li>
             <li>Gallery</li>
             <li>Contact</li>
           </ul>
+
+          <!-- Mobile Menu Icons -->
+          <div class="md:hidden flex items-center gap-4">
+            <!-- Menu (Bars) -->
+            <button id="menu-btn">
+              <i class="fas fa-bars fa-2x"></i>
+            </button>
+            <!-- Close (Xmark) -->
+            <button id="menu-cls" class="hidden">
+              <i class="fas fa-xmark fa-2x"></i>
+            </button>
+          </div>
         </div>
       </header>
     </main>
