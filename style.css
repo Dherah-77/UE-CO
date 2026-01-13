@@ -1,1 +1,62 @@
+@font-face {
+  font-family: "CircularWeb";
+  src: url("/Fonts/circularweb-book.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "General";
+  src: url("/Fonts/general.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobertMedium";
+  src: url("/Fonts/robert-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RobertRegular";
+  src: url("/Fonts/robert-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Zentry";
+  src: url("/Fonts/zentry-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-circular {
+  font-family: "CircularWeb", sans-serif;
+}
+
+.font-general {
+  font-family: "General", sans-serif;
+}
+
+.font-robert-medium {
+  font-family: "RobertMedium", sans-serif;
+}
+
+.font-robert-regular {
+  font-family: "RobertRegular", sans-serif;
+}
+
+.font-zentry {
+  font-family: "Zentry", sans-serif;
+}
+
+.font-logo {
+  font-family: "Playfair Display", serif;
+}
+
+.font-body {
+  font-family: "Inter", sans-serif;
+}
