@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "CircularWeb";
   src: url("/Fonts/circularweb-book.woff2") format("woff2");
   font-weight: normal;
@@ -50,8 +50,8 @@
 }
 
 .font-zentry {
-  font-family: "Zentry", sans-serif;
-}
+  font-family: "Zentry", sans-serif; 
+}*/
 
 .font-logo {
   font-family: "Playfair Display", serif;
@@ -72,4 +72,41 @@
 }
 .animate-zoom {
   animation: zoomInOut 4s infinite ease-in-out;
+}
+
+.slider-track {
+  animation: slide 24s infinite ease-in-out;
+}
+
+@keyframes slide {
+  0%,
+  10% {
+    transform: translateX(0);
+  }
+  15%,
+  25% {
+    transform: translateX(-15rem);
+  }
+
+  30%,
+  40% {
+    transform: translateX(-30rem);
+  }
+  45%,
+  55% {
+    transform: translateX(-45rem);
+  }
+
+  60%,
+  70% {
+    transform: translateX(-60rem);
+  }
+  75%,
+  85% {
+    transform: translateX(-75rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
