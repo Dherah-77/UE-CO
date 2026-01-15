@@ -1,9 +1,10 @@
 const styleImages = [
   "./Images/BAG2-scaled.jpg",
-  "./Images/imana-sLD5bnqTuY8-unsplash.jpg",
-  "./Images/shreesha-bhat-lz6z9GZu8hk-unsplash.jpg",
-  "./Images/kingsley-osei-abrah-fmuCylX5NKA-unsplash.jpg",
-  "./Images/prince-akachi-LWkFHEGpleE-unsplash.jpg",
+  "./Images/Gallery2.jpg",
+  "./Images/Gallery7.jpg",
+  "./Images/Gallery6.jpg",
+  "./Images/Bag2.jpg",
+  "./Images/Gallery5.jpg",
 ];
 let currentIndex = 0;
 const styleImageElement = document.getElementById("carImage");
