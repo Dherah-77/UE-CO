@@ -19,7 +19,7 @@ setInterval(() => {
 
 const track = document.getElementById("track");
 
-const slideWidth = 240 + 16; // w-60 (240px) + gap-4 (16px)
+const slideWidth = 240; // w-60 (240px) + gap-4 (16px)
 const pause = 3000; // 1.8 seconds pause
 const move = 1500; // slide duration
 
