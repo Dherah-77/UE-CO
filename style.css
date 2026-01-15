@@ -75,7 +75,7 @@
 }
 
 .slider-track {
-  animation: slide 24s infinite ease-in-out;
+  animation: slide 30s infinite ease-in-out;
 }
 
 @keyframes slide {
@@ -83,27 +83,26 @@
   10% {
     transform: translateX(0);
   }
+
   15%,
   25% {
-    transform: translateX(-15rem);
+    transform: translateX(-16rem);
   }
-
   30%,
   40% {
-    transform: translateX(-30rem);
+    transform: translateX(-32rem);
   }
   45%,
   55% {
-    transform: translateX(-45rem);
+    transform: translateX(-48rem);
   }
-
   60%,
   70% {
-    transform: translateX(-60rem);
+    transform: translateX(-64rem);
   }
   75%,
   85% {
-    transform: translateX(-75rem);
+    transform: translateX(-80rem);
   }
 
   100% {
