@@ -50,6 +50,23 @@ missUp.addEventListener("click", () => {
   missMess.classList.add("hidden");
 });
 
+// Service
+const serDown = document.getElementById("serangdn");
+const serUp = document.getElementById("serangup");
+const serMess = document.getElementById("sermess");
+
+serDown.addEventListener("click", () => {
+  serDown.classList.add("hidden");
+  serUp.classList.remove("hidden");
+  serMess.classList.remove("hidden");
+});
+
+serUp.addEventListener("click", () => {
+  serDown.classList.remove("hidden");
+  serUp.classList.add("hidden");
+  serMess.classList.add("hidden");
+});
+
 // Sliding Images
 const track = document.getElementById("track");
 
