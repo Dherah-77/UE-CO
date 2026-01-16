@@ -15,8 +15,42 @@ setInterval(() => {
   styleImageElement.src = styleImages[currentIndex];
 }, 4000);
 
-// Sliding Images
+// Vission, Mission & Service
+// Vission
+const visDown = document.getElementById("visangdn");
+const visUp = document.getElementById("visangup");
+const visMess = document.getElementById("vismess");
 
+visDown.addEventListener("click", () => {
+  visDown.classList.add("hidden");
+  visUp.classList.remove("hidden");
+  visMess.classList.remove("hidden");
+});
+
+visUp.addEventListener("click", () => {
+  visMess.classList.add("hidden");
+  visUp.classList.add("hidden");
+  visDown.classList.remove("hidden");
+});
+
+// Mission
+const missDown = document.getElementById("missangdn");
+const missUp = document.getElementById("missangup");
+const missMess = document.getElementById("missmess");
+
+missDown.addEventListener("click", () => {
+  missDown.classList.add("hidden");
+  missUp.classList.remove("hidden");
+  missMess.classList.remove("hidden");
+});
+
+missUp.addEventListener("click", () => {
+  missDown.classList.remove("hidden");
+  missUp.classList.add("hidden");
+  missMess.classList.add("hidden");
+});
+
+// Sliding Images
 const track = document.getElementById("track");
 
 const gap = 16;
