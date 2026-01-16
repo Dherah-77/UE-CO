@@ -19,7 +19,7 @@ setInterval(() => {
 
 const track = document.getElementById("track");
 
-const gap = 16; // Tailwind gap-4 = 16px
+const gap = 16;
 const pause = 3000;
 const move = 1500;
 
@@ -35,7 +35,7 @@ function slide() {
     track.style.transition = "none";
     track.appendChild(firstImage);
     track.style.transform = "translateX(0)";
-    track.offsetHeight; // force repaint
+    track.offsetHeight;
   }, move);
 }
 
