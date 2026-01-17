@@ -31,7 +31,8 @@
   <body>
     <main>
       <header
-        class="w-full fixed bg-[#f7f1e1] h-auto flex flex-row z-10 border-b-2 border-black"
+        id="mainHeader"
+        class="w-full fixed bg-transparent h-auto flex flex-row z-10 transition-all duration-300 ease-in-out"
       >
         <div class="flex items-center w-full justify-between px-2">
           <img
@@ -118,7 +119,7 @@
             <div class="hidden md:block w-[2px] h-100 bg-[#663718]"></div>
 
             <p
-              class="w-3/4 md:w-1/4 mx-auto mt-5 md:mt-10 text-[#66371b] font-CircularWeb md:text-lg"
+              class="w-3/4 md:w-1/4 mx-auto mt-5 md:mt-10 text-[#66371b] hidden md:block font-CircularWeb md:text-lg"
             >
               At UE & Co, we consult, shop, source, and style for clients who
               value luxury, quality, and intentional dressing. Our services
@@ -137,10 +138,15 @@
         <div class="text-white text-center font-logo p-4">
           <h2 class="visdrop text-lg cursor-pointer">
             Our Vision
-            <span class="md:hidden"
-            > <span id="visangdn"><i
-               class="md:hidden fa-sharp-duotone fa-solid fa-circle-chevron-down"
-            ></i></span> <span id="visangup" class="hidden"><i class="md:hidden fa-solid fa-angle-up"></i></span></span>
+            <span class="md:hidden">
+              <span id="visangdn"
+                ><i
+                  class="md:hidden fa-sharp-duotone fa-solid fa-circle-chevron-down"
+                ></i
+              ></span>
+              <span id="visangup" class="hidden"
+                ><i class="md:hidden fa-solid fa-angle-up"></i></span
+            ></span>
           </h2>
           <p id="vismess" class="hidden md:block">
             To be a leading curator of sustainable and luxury fashion, helping
@@ -154,10 +160,15 @@
         <div class="text-white p-4 text-center font-logo p-6">
           <h2 class="misdrop text-lg cursor-pointer">
             Our Mission
-            <span class="md:hidden"
-            > <span id="missangdn"><i
-               class="md:hidden fa-sharp-duotone fa-solid fa-circle-chevron-down"
-            ></i></span> <span id="missangup" class="hidden"><i class="md:hidden fa-solid fa-angle-up"></i></span></span>
+            <span class="md:hidden">
+              <span id="missangdn"
+                ><i
+                  class="md:hidden fa-sharp-duotone fa-solid fa-circle-chevron-down"
+                ></i
+              ></span>
+              <span id="missangup" class="hidden"
+                ><i class="md:hidden fa-solid fa-angle-up"></i></span
+            ></span>
           </h2>
           <p id="missmess" class="hidden md:block">
             To provide personalized fashion curation, styling, and sourcing
@@ -168,12 +179,17 @@
         </div>
       </section>
       <section class="w-full mx-auto h-auto p-12 text-center">
-        <h2 class="font-bold text-lg cursor-pointer ">
+        <h2 class="font-bold text-lg cursor-pointer">
           Services
-          <span class="md:hidden"
-            > <span id="serangdn"><i
-               class="md:hidden fa-sharp-duotone fa-solid fa-circle-chevron-down"
-            ></i></span> <span id="serangup" class="hidden"><i class="md:hidden fa-solid fa-angle-up"></i></span></span>
+          <span class="md:hidden">
+            <span id="serangdn"
+              ><i
+                class="md:hidden fa-sharp-duotone fa-solid fa-circle-chevron-down"
+              ></i
+            ></span>
+            <span id="serangup" class="hidden"
+              ><i class="md:hidden fa-solid fa-angle-up"></i></span
+          ></span>
         </h2>
         <div class="md:flex">
           <span id="sermess" class="md:w-120 hidden md:block">
@@ -256,26 +272,45 @@
         </div>
       </section>
     </main>
-    <footer class="bg-[#756d47] mt-20 w-full md:flex p-4 text-white">
-      <div class="md:w-1/3 p-4">
-        <span class="uppercase font-bold">MADE FOR YOU</span> <br />
-        <span
-          >Every service is delivered with precision, discretion, and curated
+    <footer class="bg-[#756d47] mt-20 w-full md:flex p-6 text-white">
+      <!-- Left section -->
+      <div class="md:w-1/3 p-4 text-center md:text-left">
+        <span class="uppercase font-bold tracking-wide">Made for you</span>
+        <p class="mt-2 text-sm leading-relaxed">
+          Every service is delivered with precision, discretion, and curated
           taste ensuring clients receive a seamless, elevated, and intentional
-          fashion experience.</span
-        >
+          fashion experience.
+        </p>
       </div>
-      <div class="md:w-1/3 p-4">
-        <span class="font-bold uppercase">CONTACT</span> <br />
-        <address class="gap-4"></address>
-          <i
-            class="fab fa-instagram text-white hover:text-pink-400 text-3xl mt-2"
-          ></i>
-          <br />
-          <a href="mailto:ugochietto@gmail.com">Email: Ugochietto</a>
+
+      <!-- Contact section -->
+      <div class="md:w-1/3 p-4 text-center md:text-left">
+        <span class="font-bold uppercase tracking-wide">Contact</span>
+
+        <address
+          class="mt-4 flex flex-col gap-4 not-italic items-center md:items-start"
+        >
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/ueand.co"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i
+              class="fab fa-instagram text-white hover:text-pink-400 text-3xl"
+            ></i>
+          </a>
+
+          <!-- Email -->
+          <a
+            href="mailto:ugochietto@gmail.com"
+            class="text-white hover:underline text-sm"
+          >
+            ugochietto@gmail.com
+          </a>
         </address>
       </div>
-      <div></div>
     </footer>
   </body>
 </html>

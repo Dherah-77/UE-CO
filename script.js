@@ -1,3 +1,28 @@
+// Header animation
+
+const header = document.getElementById("mainHeader");
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  // Background change
+  if (window.scrollY > 100) {
+    header.classList.remove("bg-transparent");
+    header.classList.add("bg-[#f7f1e1]", "shadow-lg");
+  } else {
+    header.classList.add("bg-transparent");
+    header.classList.remove("bg-[#f7f1e1]", "shadow-lg");
+  }
+
+  // Hide on scroll down, show on scroll up
+  if (window.scrollY > lastScrollY && window.scrollY > 100) {
+    header.style.transform = "translateY(-120%)";
+  } else {
+    header.style.transform = "translateY(0)";
+  }
+
+  lastScrollY = window.scrollY;
+});
+
 // Image change
 const styleImages = [
   "./Images/BAG2-scaled.jpg",
