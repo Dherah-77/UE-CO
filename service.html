@@ -34,152 +34,94 @@
         id="mainHeader"
         class="w-full fixed bg-transparent h-auto flex flex-row z-10 transition-all duration-300 ease-in-out"
       >
-        <div class="flex items-center w-full justify-between px-4">
-          <!-- Logo -->
-          <img
+        <div class="flex items-center w-full justify-between px-6 py-4">
+          <!-- Text logo -->
+          <p
             id="headerLogo"
-            class="h-20 opacity-0 transition-opacity duration-300"
-            src="./Images/IMG_0274-removebg-preview.png"
-            alt="Logo-image"
-          />
+            class="text-xl font-bold text-[#756d47] select-none"
+          >
+            UE & CO
+          </p>
 
           <!-- Desktop Navigation -->
-          <ul class="flex gap-6">
+          <ul class="flex gap-6 text-[#756d47] font-bold">
             <li>
-              <a class="nav-link text-white transition-colors" href="index.html"
-                >Home</a
-              >
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li>
-              <a
-                class="nav-link text-white transition-colors"
-                href="service.html"
-                >Services</a
-              >
+              <a class="nav-link" href="service.html">Services</a>
             </li>
           </ul>
         </div>
       </header>
 
       <!--1st Hero Section-->
-      <section class="relative">
-        <video
-          src="./Images/UE & CO.mp4"
-          class="w-full md:w-1/2 h-screen md:h-[80vh] object-cover"
-          type="video/mp4"
-          autoplay
-          loop
-          playsinline
-          muted
-        ></video>
-        <!-- <div
-          class="absolute top-1/4 md:top-1/3 left-8 md:left-190 text-white md:text-[#66371b] leading-[0.5] md:text-center"
+
+      <section class="w-full px-6 py-20 text-[#403f2b]">
+        <h2 class="text-2xl font-bold text-center mb-14">Services</h2>
+
+        <div
+          class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-12"
         >
-          <h3 class="font-logo font-bold text-5xl tracking-wider uppercase">
-            UE & CO
-          </h3>
-          <p class="font-body text-lg tracking-wide">
-            Curated Fashion, Styling & Sourcing
-          </p>
-        </div> -->
-
-        <!-- <div
-          class="absolute bottom-10 md:bottom-40 right-4 md:right-50 text-white md:text-[#756d47] text-right md:text-center"
-        >
-          <h3 class="font-logo font-bold text-3xl tracking-wide">
-            Work With US,
-          </h3>
-          <p class="font-logo font-bold text-3xl tracking-wide">
-            Book a Consultation
-          </p>
-        </div> -->
-      </section>
-
-      <section class="w-full px-6 py-16">
-        <h2 class="text-2xl font-bold text-center mb-10">Services</h2>
-
-        <!-- Services Grid -->
-        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <!-- Service Card -->
-          <div class="border rounded-xl p-6 shadow-sm">
-            <h3 class="font-semibold text-lg underline mb-2">
+          <div>
+            <h3 class="font-semibold text-lg tracking-wide mb-3">
               Personal Shopping
             </h3>
-            <p class="text-sm mb-4">
+            <p class="text-sm leading-relaxed">
               We shop on behalf of our clients, sourcing fashion pieces that
-              align with their style, needs, and budget.
+              align with individual style, needs, and budget.
             </p>
-            <button
-              onclick="openModal('Personal Shopping')"
-              class="bg-black text-white px-5 py-2 rounded-md text-sm"
-            >
-              Book a Consultation
-            </button>
           </div>
 
-          <div class="border rounded-xl p-6 shadow-sm">
-            <h3 class="font-semibold text-lg underline mb-2">Sourcing</h3>
-            <p class="text-sm mb-4">
-              We curate African and international fashion brands, focusing on
-              sustainable, high-quality, and hard-to-find pieces.
+          <div>
+            <h3 class="font-semibold text-lg tracking-wide mb-3">Sourcing</h3>
+            <p class="text-sm leading-relaxed">
+              Curating African and international brands with a focus on quality,
+              sustainability, and rare finds.
             </p>
-            <button
-              onclick="openModal('Sourcing')"
-              class="bg-black text-white px-5 py-2 rounded-md text-sm"
-            >
-              Book a Consultation
-            </button>
           </div>
 
-          <div class="border rounded-xl p-6 shadow-sm">
-            <h3 class="font-semibold text-lg underline mb-2">Styling</h3>
-            <p class="text-sm mb-4">
-              We create intentional looks for everyday wear, special occasions,
-              and lifestyle needs.
+          <div>
+            <h3 class="font-semibold text-lg tracking-wide mb-3">Styling</h3>
+            <p class="text-sm leading-relaxed">
+              Creating intentional looks for everyday wear, events, and
+              lifestyle moments.
             </p>
-            <button
-              onclick="openModal('Styling')"
-              class="bg-black text-white px-5 py-2 rounded-md text-sm"
-            >
-              Book a Consultation
-            </button>
           </div>
 
-          <div class="border rounded-xl p-6 shadow-sm">
-            <h3 class="font-semibold text-lg underline mb-2">
+          <div>
+            <h3 class="font-semibold text-lg tracking-wide mb-3">
               Wardrobe Curation
             </h3>
-            <p class="text-sm mb-4">
-              We refine and build cohesive wardrobes by selecting pieces that
-              work together.
+            <p class="text-sm leading-relaxed">
+              Building cohesive wardrobes through thoughtful selection and
+              refined editing.
             </p>
-            <button
-              onclick="openModal('Wardrobe Curation')"
-              class="bg-black text-white px-5 py-2 rounded-md text-sm"
-            >
-              Book a Consultation
-            </button>
           </div>
 
-          <div class="border rounded-xl p-6 shadow-sm sm:col-span-2">
-            <h3 class="font-semibold text-lg underline mb-2">
+          <div class="sm:col-span-2 max-w-xl">
+            <h3 class="font-semibold text-lg tracking-wide mb-3">
               Fashion Consultation
             </h3>
-            <p class="text-sm mb-4">
-              One-on-one consultations to understand your style, lifestyle, and
-              goals with tailored guidance.
+            <p class="text-sm leading-relaxed">
+              One-on-one consultations offering tailored guidance based on
+              personal style, lifestyle, and goals.
             </p>
-            <button
-              onclick="openModal('Fashion Consultation')"
-              class="bg-black text-white px-5 py-2 rounded-md text-sm"
-            >
-              Book a Consultation
-            </button>
           </div>
         </div>
+
+        <!-- CTA -->
+        <div class="mt-16 text-center">
+          <button
+            onclick="openModal('Fashion Consultation')"
+            class="inline-block px-8 py-3 bg-[#403f2b] text-white font-semibold tracking-wide hover:opacity-90 transition"
+          >
+            Book a Consultation
+          </button>
+        </div>
       </section>
+
       <section>
-        <!-- Modal -->
         <div
           id="consultationModal"
           class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50"
@@ -194,30 +136,43 @@
 
             <h3 class="text-lg font-semibold mb-4">Book a Consultation</h3>
 
-            <form class="space-y-4">
+            <form
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              class="space-y-4"
+            >
+              <!-- Email subject -->
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Consultation Booking"
+              />
+
               <input
                 type="text"
+                name="name"
                 placeholder="Full Name"
-                class="w-full border rounded-md p-2"
+                class="w-full p-2"
                 required
               />
 
               <input
                 type="email"
+                name="email"
                 placeholder="Email Address"
-                class="w-full border rounded-md p-2"
+                class="w-full p-2"
                 required
               />
 
               <!-- Mode of Contact -->
-              <select class="w-full border rounded-md p-2">
+              <select name="contact_mode" class="w-full p-2">
                 <option value="">Preferred Mode of Contact</option>
                 <option>Email</option>
                 <option>Phone</option>
               </select>
 
               <!-- Service Dropdown -->
-              <select id="serviceSelect" class="w-full border rounded-md p-2">
+              <select id="serviceSelect" name="service" class="w-full p-2">
                 <option>Personal Shopping</option>
                 <option>Sourcing</option>
                 <option>Styling</option>
@@ -226,8 +181,9 @@
               </select>
 
               <textarea
+                name="notes"
                 placeholder="Additional Notes"
-                class="w-full border rounded-md p-2 h-24"
+                class="w-full p-2 h-24"
               ></textarea>
 
               <button
@@ -241,42 +197,69 @@
         </div>
       </section>
     </main>
-    <footer class="bg-[#756d47] mt-20 w-full md:flex p-6 text-white">
-      <!-- Left section -->
-      <div class="md:w-1/3 p-4 text-center md:text-left">
-        <span class="uppercase font-bold tracking-wide">Made for you</span>
-        <p class="mt-2 text-sm leading-relaxed">
-          Every service is delivered with precision, discretion, and curated
-          taste ensuring clients receive a seamless, elevated, and intentional
-          fashion experience.
-        </p>
+    <footer class="bg-[#756d47] mt-20 w-full text-white">
+      <div
+        class="max-w-6xl mx-auto px-6 py-12 grid gap-10 text-center md:text-left md:grid-cols-3"
+      >
+        <!-- Brand / Statement -->
+        <div>
+          <span class="uppercase font-bold tracking-widest text-sm">
+            Made for you
+          </span>
+          <p class="mt-4 text-sm leading-relaxed opacity-90">
+            Every service is delivered with precision, discretion, and curated
+            taste—ensuring a seamless, elevated, and intentional fashion
+            experience.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <span class="uppercase font-bold tracking-widest text-sm">
+            Explore
+          </span>
+          <ul class="mt-4 flex flex-col gap-3 text-sm">
+            <li>
+              <a href="index.html" class="hover:underline">Home</a>
+            </li>
+
+            <li>
+              <a href="service.html" class="hover:underline">Services</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <span class="uppercase font-bold tracking-widest text-sm">
+            Contact
+          </span>
+
+          <div class="mt-4 flex flex-col gap-4 items-center md:items-start">
+            <a
+              href="https://www.instagram.com/ueand.co"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i
+                class="fab fa-instagram text-white text-2xl hover:text-pink-300 transition"
+              ></i>
+            </a>
+
+            <a
+              href="mailto:hello@ueandco.online"
+              class="text-sm hover:underline"
+            >
+              hello@ueandco.online
+            </a>
+          </div>
+        </div>
       </div>
 
-      <!-- Contact section -->
-      <div class="md:w-1/3 p-4 text-center md:text-left">
-        <span class="font-bold uppercase tracking-wide">Contact</span>
-
-        <address
-          class="mt-4 flex flex-col gap-4 not-italic items-center md:items-start"
-        >
-          <a
-            href="https://www.instagram.com/ueand.co"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <i
-              class="fab fa-instagram text-white hover:text-pink-400 text-3xl"
-            ></i>
-          </a>
-
-          <a
-            href="mailto:hello@ueandco.online"
-            class="text-white hover:underline text-sm"
-          >
-            hello@ueandco.online
-          </a>
-        </address>
+      <!-- Bottom bar -->
+      <div class="text-center text-xs opacity-70 pb-6">
+        © UE & Co. All rights reserved.
       </div>
     </footer>
   </body>
