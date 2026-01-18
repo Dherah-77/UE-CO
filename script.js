@@ -1,16 +1,42 @@
 // Header animation
 
 const header = document.getElementById("mainHeader");
+const logo = document.getElementById("headerLogo");
+const navLinks = document.querySelectorAll(".nav-link");
+
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
-  // Background change
-  if (window.scrollY > 100) {
+  const scrolled = window.scrollY > 100;
+
+  if (scrolled) {
+    // Header background
     header.classList.remove("bg-transparent");
     header.classList.add("bg-[#f7f1e1]", "shadow-lg");
+
+    // Show logo
+    logo.classList.remove("opacity-0");
+    logo.classList.add("opacity-100");
+
+    // Change nav text to black
+    navLinks.forEach((link) => {
+      link.classList.remove("text-white");
+      link.classList.add("text-black");
+    });
   } else {
+    // Transparent state
     header.classList.add("bg-transparent");
     header.classList.remove("bg-[#f7f1e1]", "shadow-lg");
+
+    // Hide logo
+    logo.classList.add("opacity-0");
+    logo.classList.remove("opacity-100");
+
+    // Nav text white
+    navLinks.forEach((link) => {
+      link.classList.add("text-white");
+      link.classList.remove("text-black");
+    });
   }
 
   // Hide on scroll down, show on scroll up
