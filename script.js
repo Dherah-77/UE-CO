@@ -116,3 +116,15 @@ function slide() {
 }
 
 setInterval(slide, pause + move);
+
+//Forms
+function openModal(service) {
+  document.getElementById("consultationModal").classList.remove("hidden");
+  document.getElementById("consultationModal").classList.add("flex");
+  document.getElementById("serviceSelect").value = service;
+}
+
+function closeModal() {
+  document.getElementById("consultationModal").classList.add("hidden");
+  document.getElementById("consultationModal").classList.remove("flex");
+}
