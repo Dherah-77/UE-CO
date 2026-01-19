@@ -1,6 +1,6 @@
 // Header animation
 
-const header = document.getElementById("mainHeader");
+/* const header = document.getElementById("mainHeader");
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
   }
 
   lastScrollY = window.scrollY;
-});
+}); */
 
 // Image change
 const styleImages = [
