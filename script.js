@@ -1,27 +1,3 @@
-// Header animation
-
-/* const header = document.getElementById("mainHeader");
-let lastScrollY = window.scrollY;
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    header.classList.remove("bg-transparent");
-    header.classList.add("bg-[#f7f1e1]", "shadow-lg");
-  } else {
-    header.classList.add("bg-transparent");
-    header.classList.remove("bg-[#f7f1e1]", "shadow-lg");
-  }
-
-  // Hide on scroll down, show on scroll up
-  if (window.scrollY > lastScrollY && window.scrollY > 100) {
-    header.style.transform = "translateY(-120%)";
-  } else {
-    header.style.transform = "translateY(0)";
-  }
-
-  lastScrollY = window.scrollY;
-}); */
-
 // Image change
 const styleImages = [
   "./Images/BAG2-scaled.jpg",
@@ -74,23 +50,6 @@ missUp.addEventListener("click", () => {
   missMess.classList.add("hidden");
 });
 
-// Service
-// const serDown = document.getElementById("serangdn");
-// const serUp = document.getElementById("serangup");
-// const serMess = document.getElementById("sermess");
-
-// serDown.addEventListener("click", () => {
-//   serDown.classList.add("hidden");
-//   serUp.classList.remove("hidden");
-//   serMess.classList.remove("hidden");
-// });
-
-// serUp.addEventListener("click", () => {
-//   serDown.classList.remove("hidden");
-//   serUp.classList.add("hidden");
-//   serMess.classList.add("hidden");
-// });
-
 // Sliding Images
 const track = document.getElementById("track");
 
@@ -118,12 +77,31 @@ setInterval(slide, pause + move);
 
 // Form
 function openModal(service) {
-  document.getElementById("consultationModal").classList.remove("hidden");
-  document.getElementById("consultationModal").classList.add("flex");
-  document.getElementById("serviceSelect").value = service;
+  const modal = document.getElementById("consultationModal");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+
+  if (service) {
+    document.getElementById("serviceSelect").value = service;
+  }
 }
 
 function closeModal() {
-  document.getElementById("consultationModal").classList.add("hidden");
-  document.getElementById("consultationModal").classList.remove("flex");
+  const modal = document.getElementById("consultationModal");
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+}
+
+function handleContactMode(value) {
+  const phoneWrapper = document.getElementById("phoneField");
+  const phoneInput = phoneWrapper.querySelector("input");
+
+  if (value === "Phone") {
+    phoneWrapper.classList.remove("hidden");
+    phoneInput.setAttribute("required", "true");
+  } else {
+    phoneWrapper.classList.add("hidden");
+    phoneInput.removeAttribute("required");
+    phoneInput.value = "";
+  }
 }

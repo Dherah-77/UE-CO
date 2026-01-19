@@ -127,7 +127,7 @@
           id="consultationModal"
           class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50"
         >
-          <div class="bg-white w-full max-w-md rounded-xl p-6 relative">
+          <div class="bg-white w-full max-w-md p-6 relative">
             <button
               onclick="closeModal()"
               class="absolute top-3 right-4 text-xl"
@@ -149,37 +149,62 @@
                 value="New Consultation Booking"
               />
 
+              <!-- Full Name -->
               <input
                 type="text"
                 name="name"
                 placeholder="Full Name"
-                class="w-full p-2 border-b-1 border-black"
+                class="w-full p-2 border-b border-black outline-none"
                 required
               />
 
+              <!-- Email -->
               <input
                 type="email"
                 name="email"
                 placeholder="Email Address"
-                class="w-full p-2 border-b-1 border-black"
+                class="w-full p-2 border-b border-black outline-none"
+                required
+              />
+
+              <!-- Location -->
+              <input
+                type="text"
+                name="location"
+                placeholder="Location (City, Country)"
+                class="w-full p-2 border-b border-black outline-none"
                 required
               />
 
               <!-- Mode of Contact -->
               <select
                 name="contact_mode"
-                class="w-full p-2 border-b-1 border-black"
+                id="contactMode"
+                class="w-full p-2 border-b border-black outline-none"
+                onchange="handleContactMode(this.value)"
+                required
               >
                 <option value="">Preferred Mode of Contact</option>
-                <option>Email</option>
-                <option>Phone</option>
+                <option value="Email">Email</option>
+                <option value="Phone">Phone</option>
               </select>
+
+              <!-- Phone Number (hidden by default) -->
+              <div id="phoneField" class="hidden">
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  class="w-full p-2 border-b border-black outline-none"
+                />
+              </div>
 
               <!-- Service Dropdown -->
               <select
                 id="serviceSelect"
                 name="service"
-                class="w-full p-2 border-b-1 border-black"
+                class="w-full p-2 border-b border-black outline-none"
+                required
               >
                 <option>Personal Shopping</option>
                 <option>Sourcing</option>
@@ -188,15 +213,17 @@
                 <option>Fashion Consultation</option>
               </select>
 
+              <!-- Notes -->
               <textarea
                 name="notes"
                 placeholder="Additional Notes"
-                class="w-full p-2 h-24 border-b-1 border-black"
+                class="w-full p-2 h-24 border-b border-black outline-none"
               ></textarea>
 
+              <!-- Submit -->
               <button
                 type="submit"
-                class="w-full bg-black text-white py-2 rounded-md"
+                class="w-full bg-black text-white py-2 mt-4"
               >
                 Submit
               </button>
