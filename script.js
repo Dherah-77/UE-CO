@@ -93,15 +93,14 @@ function closeModal() {
 }
 
 function handleContactMode(value) {
-  const phoneWrapper = document.getElementById("phoneField");
-  const phoneInput = phoneWrapper.querySelector("input");
+  const phoneInput = document.getElementById("phoneField");
 
   if (value === "Phone") {
-    phoneWrapper.classList.remove("hidden");
-    phoneInput.setAttribute("required", "true");
+    phoneInput.classList.remove("hidden");
+    phoneInput.required = true;
   } else {
-    phoneWrapper.classList.add("hidden");
-    phoneInput.removeAttribute("required");
+    phoneInput.classList.add("hidden");
+    phoneInput.required = false;
     phoneInput.value = "";
   }
 }
