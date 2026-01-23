@@ -27,7 +27,7 @@
     <main class="font-apple-system">
       <header
         id="mainHeader"
-        class="w-full fixed bg-transparent h-auto flex flex-row z-10 transition-all duration-300 ease-in-out fixed font-sans"
+        class="w-full absolute top-0 bg-transparent h-auto flex flex-row font-sans z-10"
       >
         <div class="flex items-center w-full justify-between px-6 py-4">
           <!-- Text logo -->
@@ -51,22 +51,31 @@
       </header>
 
       <!--1st Hero Section-->
-      <section class="relative">
+      <section class="md:mb-20 flex justify-between">
         <video
           src="./Images/UE & CO.mp4"
-          class="w-full md:w-1/2 h-screen md:h-[80vh] object-cover"
+          class="relative w-full h-screen md:w-160 md:h-90 md:top-17 object-cover"
           type="video/mp4"
           autoplay
           loop
           playsinline
           muted
         ></video>
+
+        <div
+          class="hidden md:flex flex-col md:w-1/2 text-center items-center justify-center text-[#66371b] p-4"
+        >
+          <h1 class="text-2xl font-semibold">Designed to Be Worn.</h1>
+          <p class="text-4xl text-[#756d47] mt-5 font-bold">
+            Curated fashion, styling & sourcing
+          </p>
+        </div>
       </section>
 
       <!--About Us-->
       <section class="mt-20 px-4 max-w-7xl mx-auto text-center">
         <div
-          class="hidden md:block max-w-3xl mx-auto text-[#66371b] text-sm md:text-lg leading-relaxed mb-16"
+          class="hidden md:block max-w-3xl mx-auto text-[#66371b] text-sm md:text-lg leading-relaxed mb-16 p-6 md:mt-10"
         >
           <p>
             We specialize in personalized styling, wardrobe, and fashion
@@ -173,36 +182,6 @@
         >
           Our Services →
         </a>
-
-        <!-- <div class="md:flex md:items-center md:justify-center md:gap-16">
-          
-          <div class="hidden md:block max-w-sm text-left">
-            <p class=" text-[#66371b] text-base mb-4">
-              • Curated looks. Zero guesswork.
-            </p>
-            <p class="font-CircularWeb text-[#66371b] text-base mb-4">
-              • Luxury pieces, styled with intention.
-            </p>
-            <p class="font-CircularWeb text-[#66371b] text-base mb-4">
-              • Thoughtful fashion that speaks before you do.
-            </p>
-            <p class="font-CircularWeb text-[#66371b] text-base">
-              • Elevated wardrobes, effortlessly done.
-            </p>
-          </div>
-
-          
-          <div class="hidden md:block">
-            <video
-              src="./Images/Mifuko.mp4"
-              class="h-96 object-cover"
-              playsinline
-              autoplay
-              loop
-              muted
-            ></video>
-          </div>
-        </div>-->
       </section>
 
       <section>
