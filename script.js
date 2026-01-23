@@ -2,8 +2,8 @@
 const styleImages = [
   "./Images/BAG2-scaled.jpg",
   "./Images/Gallery2.jpg",
-  "./Images/Gallery7.jpg",
-  "./Images/Gallery6.jpg",
+  "./Images/gallery6.jpeg",
+  "./Images/Gallery11.jpg",
   "./Images/Bag2.jpg",
   "./Images/Gallery5.jpg",
 ];
