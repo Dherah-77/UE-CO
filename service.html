@@ -125,15 +125,6 @@
         <h2 class="font-bold text-[#403f2b] text-center text-xl tracking-wide">
           Testimonials
         </h2>
-        <p class="text-center text-sm">
-          Meticoulously handcrafted crochet and macrame clothing and
-          accessories.
-        </p>
-        <p class="text-center text-sm">
-          Each item is thoughtfully created using traditional technique and
-          premium materials, ensuring a timeless and eco-concious addition to
-          your wardrope.
-        </p>
 
         <div
           id="testimonialViewport"
@@ -367,17 +358,17 @@
     </footer>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const track = document.getElementById("testimonialTrack");
+        const track1 = document.getElementById("testimonialTrack");
         const viewport = document.getElementById("testimonialViewport");
         const nextBtn = document.getElementById("nextBtn");
         const prevBtn = document.getElementById("prevBtn");
 
-        const slides = track.children;
+        const slides = track1.children;
         let index = 0;
 
         function updateSlider() {
           const slideWidth = viewport.clientWidth;
-          track.style.transform = `translateX(-${index * slideWidth}px)`;
+          track1.style.transform = `translateX(-${index * slideWidth}px)`;
 
           prevBtn.disabled = index === 0;
           nextBtn.disabled = index === slides.length - 1;
