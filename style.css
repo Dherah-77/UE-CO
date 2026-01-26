@@ -16,3 +16,13 @@
 .animate-zoom {
   animation: zoomInOut 4s infinite ease-in-out;
 }
+
+/* Testimonial slider fixes */
+#testimonialTrack {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+#testimonialTrack > div {
+  scroll-snap-align: start;
+}

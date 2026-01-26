@@ -15,7 +15,7 @@ setInterval(() => {
   styleImageElement.src = styleImages[currentIndex];
 }, 4000);
 
-// Vission, Mission & Service
+// Vission & Mission
 // Vission
 const visDown = document.getElementById("visangdn");
 const visUp = document.getElementById("visangup");

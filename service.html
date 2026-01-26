@@ -59,7 +59,7 @@
       <!--1st Hero Section-->
 
       <section class="w-full px-6 py-20 text-[#403f2b]">
-        <h2 class="md:text-xl font-bold text-center mb-14">Services</h2>
+        <h2 class="md:text-lg font-bold text-center mb-14">Services</h2>
 
         <div
           class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-12"
@@ -118,6 +118,70 @@
             class="inline-block px-8 py-3 bg-[#756d47] text-white font-semibold tracking-wide hover:opacity-90 transition rounded-xl"
           >
             Make Booking
+          </button>
+        </div>
+      </section>
+      <section class="max-w-4xl mx-auto mt-10 px-4">
+        <h2 class="font-bold text-[#403f2b] text-center text-xl tracking-wide">
+          Testimonials
+        </h2>
+        <p class="text-center text-sm">
+          Meticoulously handcrafted crochet and macrame clothing and
+          accessories.
+        </p>
+        <p class="text-center text-sm">
+          Each item is thoughtfully created using traditional technique and
+          premium materials, ensuring a timeless and eco-concious addition to
+          your wardrope.
+        </p>
+
+        <div
+          id="testimonialViewport"
+          class="relative overflow-hidden mt-10 w-full"
+        >
+          <div
+            id="testimonialTrack"
+            class="flex transition-transform duration-500 ease-in-out"
+          >
+            <div class="min-w-full p-6 text-center text-sm">
+              <p>Got them, they're lovely. Enjoying my bags</p>
+              <p class="mt-2 font-semibold">@quacktails.ng</p>
+            </div>
+
+            <div class="min-w-full p-6 text-center text-sm">
+              <p>I got many compliments on these bags</p>
+              <p class="mt-2 font-semibold">– Chioma</p>
+            </div>
+
+            <div class="min-w-full p-6 text-center text-sm">
+              <p>Hiya just got the bags, love them</p>
+              <p class="mt-2 font-semibold">– Funke</p>
+            </div>
+
+            <div class="min-w-full p-6 text-center text-sm">
+              <p>
+                Just got my bag, I really love it. Thank you, wishing you the
+                best with the business
+              </p>
+              <p class="mt-2 font-semibold">– Laide</p>
+            </div>
+          </div>
+
+          <button
+            id="prevBtn"
+            class="absolute left-2 top-1/2 -translate-y-1/2 bg-white px-3 py-1 disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled
+            aria-label="Previous testimonial"
+          >
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+
+          <button
+            id="nextBtn"
+            class="absolute right-2 top-1/2 -translate-y-1/2 bg-white px-3 py-1 disabled:opacity-50 disabled:cursor-not-allowed"
+            aria-label="Next testimonial"
+          >
+            <i class="fa-solid fa-angle-right"></i>
           </button>
         </div>
       </section>
@@ -301,5 +365,42 @@
         © UE & Co. All rights reserved.
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const track = document.getElementById("testimonialTrack");
+        const viewport = document.getElementById("testimonialViewport");
+        const nextBtn = document.getElementById("nextBtn");
+        const prevBtn = document.getElementById("prevBtn");
+
+        const slides = track.children;
+        let index = 0;
+
+        function updateSlider() {
+          const slideWidth = viewport.clientWidth;
+          track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+          prevBtn.disabled = index === 0;
+          nextBtn.disabled = index === slides.length - 1;
+        }
+
+        nextBtn.addEventListener("click", () => {
+          if (index < slides.length - 1) {
+            index++;
+            updateSlider();
+          }
+        });
+
+        prevBtn.addEventListener("click", () => {
+          if (index > 0) {
+            index--;
+            updateSlider();
+          }
+        });
+
+        window.addEventListener("resize", updateSlider);
+
+        updateSlider();
+      });
+    </script>
   </body>
 </html>
