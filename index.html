@@ -38,7 +38,7 @@
             UE & CO
           </p>
 
-          <!-- Desktop Navigation -->
+          <!-- Navigation -->
           <ul class="flex gap-6 text-[#756d47] font-bold">
             <li>
               <a class="nav-link" href="index.html">Home</a>
@@ -51,41 +51,59 @@
       </header>
 
       <!--1st Hero Section-->
-      <section class="flex justify-between h-screen">
+      <section class="flex items-center justify-between h-screen md:px-8 gap-8">
+        <!-- Video -->
         <video
           src="./Images/UE & CO.mp4"
-          class="relative w-full h-screen md:w-[640px] md:h-[445px] md:top-[68px] object-cover"
-          type="video/mp4"
+          class="w-full h-screen md:w-[640px] md:h-[445px] object-cover md:rounded-xl md:shadow-lg"
           autoplay
           loop
           playsinline
           muted
         ></video>
 
+        <!-- Divider -->
         <div
-          class="hidden md:flex flex-col md:w-1/2 text-center items-center justify-center text-[#66371b] p-4"
+          class="hidden md:block w-px h-2/3 bg-gradient-to-b from-transparent via-[#c2b280] to-transparent"
+        ></div>
+
+        <!-- Text Panel -->
+        <div
+          class="hidden md:flex flex-col md:w-1/2 items-center justify-center bg-[#f3f1ec] text-[#66371b] p-12 rounded-3xl relative"
         >
-          <h1 class="text-2xl font-semibold">Designed to Be Worn.</h1>
-          <p class="text-4xl text-[#756d47] mt-5 font-bold">
+          <h1 class="text-xl tracking-widest uppercase font-medium">
+            Designed to be worn
+          </h1>
+
+          <p
+            class="text-5xl leading-tight text-[#756d47] mt-6 font-extrabold max-w-md text-center"
+          >
             Curated fashion, styling & sourcing
           </p>
         </div>
       </section>
 
       <!--About Us-->
-      <section class="mt-20 md:mt-0 py-12 px-4 max-w-7xl mx-auto text-center">
-        <div class="md:flex md:items-center md:justify-center md:gap-8 p-6">
+      <section class="mt-15 md:mt-0 py-12 px-4 max-w-7xl mx-auto text-center">
+        <div
+          class="md:flex md:items-center md:justify-center md:gap-12 md:relative p-6"
+        >
+          <!-- Desktop-only soft transition glow -->
+          <div
+            class="hidden md:block absolute -top-24 left-1/2 -translate-x-1/2 w-[90%] h-40 bg-gradient-to-b from-[#f3f1ec] to-transparent pointer-events-none"
+          ></div>
+
+          <!-- Image -->
           <img
             id="carImage"
-            class="animate-zoom h-80 mx-auto rounded-xl"
+            class="animate-zoom h-80 mx-auto rounded-xl md:rounded-3xl md:shadow-lg relative z-20"
             src="./Images/BAG2-scaled.jpg"
             alt="Fashion Image"
           />
 
-          <!-- <div class="hidden md:block border-l-2 border-[#663718] h-80"></div> -->
-
+          <!-- Text -->
           <p
-            class="mt-10 max-w-md mx-auto text-[#66371b] text-sm md:text-lg leading-relaxed"
+            class="mt-10 max-w-md mx-auto text-[#66371b] text-sm md:text-lg leading-relaxed md:text-left md:px-8 relative z-20"
           >
             We specialize in styling, curation, and fashion consultancy. Our
             goal is to make fashion accessible, stylish, and impactful.
