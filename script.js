@@ -16,39 +16,43 @@ setInterval(() => {
 }, 4000);
 
 // Vission & Mission
-// Vission
+// VISION
 const visDown = document.getElementById("visangdn");
 const visUp = document.getElementById("visangup");
 const visMess = document.getElementById("vismess");
 
-visDown.addEventListener("click", () => {
-  visDown.classList.add("hidden");
-  visUp.classList.remove("hidden");
-  visMess.classList.remove("hidden");
-});
+if (visDown && visUp && visMess) {
+  visDown.addEventListener("click", () => {
+    visDown.classList.add("hidden");
+    visUp.classList.remove("hidden");
+    visMess.classList.remove("hidden");
+  });
 
-visUp.addEventListener("click", () => {
-  visMess.classList.add("hidden");
-  visUp.classList.add("hidden");
-  visDown.classList.remove("hidden");
-});
+  visUp.addEventListener("click", () => {
+    visMess.classList.add("hidden");
+    visUp.classList.add("hidden");
+    visDown.classList.remove("hidden");
+  });
+}
 
-// Mission
+// MISSION
 const missDown = document.getElementById("missangdn");
 const missUp = document.getElementById("missangup");
 const missMess = document.getElementById("missmess");
 
-missDown.addEventListener("click", () => {
-  missDown.classList.add("hidden");
-  missUp.classList.remove("hidden");
-  missMess.classList.remove("hidden");
-});
+if (missDown && missUp && missMess) {
+  missDown.addEventListener("click", () => {
+    missDown.classList.add("hidden");
+    missUp.classList.remove("hidden");
+    missMess.classList.remove("hidden");
+  });
 
-missUp.addEventListener("click", () => {
-  missDown.classList.remove("hidden");
-  missUp.classList.add("hidden");
-  missMess.classList.add("hidden");
-});
+  missUp.addEventListener("click", () => {
+    missDown.classList.remove("hidden");
+    missUp.classList.add("hidden");
+    missMess.classList.add("hidden");
+  });
+}
 
 // Sliding Images
 const track = document.getElementById("track");
@@ -75,8 +79,32 @@ function slide() {
 
 setInterval(slide, pause + move);
 
-// Form
-function openModal(service) {
+// HOME MODAL
+const modal = document.getElementById("leadModal");
+
+window.openHomeModal = function () {
+  if (!modal) return;
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+  document.body.style.overflow = "hidden";
+};
+
+window.closeHomeModal = function () {
+  if (!modal) return;
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+  document.body.style.overflow = "auto";
+};
+
+//  SHOW ON EVERY PAGE LOAD
+if (modal) {
+  window.addEventListener("load", () => {
+    setTimeout(openHomeModal, 1500);
+  });
+}
+
+// Service Form
+function openServiceModal(service) {
   const modal = document.getElementById("consultationModal");
   modal.classList.remove("hidden");
   modal.classList.add("flex");
@@ -86,7 +114,7 @@ function openModal(service) {
   }
 }
 
-function closeModal() {
+function closeServiceModal() {
   const modal = document.getElementById("consultationModal");
   modal.classList.add("hidden");
   modal.classList.remove("flex");

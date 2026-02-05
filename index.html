@@ -233,7 +233,7 @@
           </span>
           <ul class="mt-4 flex flex-col gap-3 text-sm md:text-lg">
             <li>
-              <a href="index.html" class="hover:underline">Home</a>
+              <a href="/" class="hover:underline">Home</a>
             </li>
 
             <li>
@@ -275,5 +275,49 @@
         © UE & Co. All rights reserved.
       </div>
     </footer>
+    <!-- Modal Overlay -->
+    <div
+      id="leadModal"
+      class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50"
+    >
+      <!-- Modal Box -->
+      <div
+        class="bg-white w-full max-w-md mx-4 p-6 relative rounded-lg animate-fadeIn"
+      >
+        <!-- Close Button -->
+        <button
+          onclick="closeHomeModal()"
+          class="absolute top-3 right-4 text-xl text-gray-500 hover:text-black"
+        >
+          &times;
+        </button>
+
+        <h2 class="text-2xl font-semibold mb-2">Let’s Style You</h2>
+        <p class="text-sm text-gray-600 mb-4">
+          Get exclusive fashion updates and styling tips from UE&CO.
+        </p>
+
+        <form class="space-y-3">
+          <input
+            type="text"
+            placeholder="Your name"
+            class="w-full border px-3 py-2 rounded"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email address"
+            class="w-full border px-3 py-2 rounded"
+            required
+          />
+          <button
+            type="submit"
+            class="w-full bg-black text-white py-2 rounded hover:opacity-90"
+          >
+            Notify Me
+          </button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
