@@ -51,11 +51,13 @@
       </header>
 
       <!--1st Hero Section-->
-      <section class="flex items-center justify-between h-screen md:px-8 gap-8">
+      <section
+        class="flex items-center justify-between h-screen md:px-8 md:pb-20 gap-8"
+      >
         <!-- Video -->
         <video
           src="./Images/UE & CO.mp4"
-          class="w-full h-screen md:w-[640px] md:h-[445px] object-cover md:rounded-xl md:shadow-lg"
+          class="relative top-4 h-[86vh] w-[90vw] md:w-[640px] md:h-[445px] object-cover rounded-xl md:shadow-lg mx-auto"
           autoplay
           loop
           playsinline
@@ -103,6 +105,117 @@
             We specialize in styling, curation, and fashion consultancy. Our
             goal is to make fashion accessible, stylish, and impactful.
           </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="mt-16 text-center">
+          <button
+            onclick="openServiceModal(this)"
+            class="inline-block px-8 py-3 bg-[#756d47] text-white font-semibold tracking-wide hover:opacity-90 transition rounded-xl cursor-pointer"
+          >
+            Make Booking →
+          </button>
+        </div>
+        <div
+          class="consultationModal fixed inset-0 bg-black/60 hidden items-center justify-center z-50"
+        >
+          <div class="bg-white w-full max-w-md p-6 relative">
+            <button
+              onclick="closeServiceModal(this)"
+              class="absolute top-3 right-4 text-xl"
+              aria-label="Close"
+            >
+              &times;
+            </button>
+
+            <h3 class="text-lg font-semibold mb-4">Book a Consultation</h3>
+
+            <form
+              action="https://formspree.io/f/mzdegnqb"
+              method="POST"
+              class="space-y-4"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Consultation Booking"
+              />
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                class="w-full p-2 border-b border-black outline-none"
+                required
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                class="w-full p-2 border-b border-black outline-none"
+                required
+              />
+
+              <input
+                type="text"
+                name="location"
+                placeholder="Location (City, Country)"
+                class="w-full p-2 border-b border-black outline-none"
+                required
+              />
+
+              <div class="flex flex-col md:flex-row gap-4">
+                <!-- Contact Mode -->
+                <select
+                  name="contact_mode"
+                  class="contactMode w-full md:w-1/3 p-2 border-b border-black outline-none"
+                  onchange="handleContactMode(this)"
+                  required
+                >
+                  <option value="">Preferred Contact</option>
+                  <option value="Email">Email</option>
+                  <option value="Phone">Phone</option>
+                </select>
+
+                <!-- Phone -->
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  class="phoneField w-full md:w-1/3 p-2 border-b border-black outline-none hidden"
+                />
+
+                <!-- Service -->
+                <select
+                  name="service"
+                  class="serviceSelect w-full md:w-1/3 p-2 border-b border-black outline-none"
+                  required
+                >
+                  <option value="">Select Service</option>
+                  <option>Personal Shopping</option>
+                  <option>Sourcing</option>
+                  <option>Styling</option>
+                  <option>Wardrobe Curation</option>
+                  <option>Fashion Consultation</option>
+                </select>
+              </div>
+
+              <textarea
+                name="notes"
+                placeholder="Additional Notes"
+                class="w-full p-2 h-24 border-b border-black outline-none"
+              ></textarea>
+
+              <button
+                type="submit"
+                class="w-full bg-[#666] rounded text-white py-2 mt-4"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
       </section>
 
@@ -297,19 +410,30 @@
           Get exclusive fashion updates and styling tips from UE&CO.
         </p>
 
-        <form class="space-y-3">
+        <form
+          class="space-y-3"
+          action="https://formspree.io/f/mzdegnqb"
+          method="POST"
+        >
           <input
             type="text"
+            name="name"
             placeholder="Your name"
-            class="w-full border px-3 py-2 rounded"
+            class="w-full px-3 py-2 border-b border-black"
             required
           />
+
           <input
             type="email"
+            name="email"
             placeholder="Email address"
-            class="w-full border px-3 py-2 rounded"
+            class="w-full px-3 py-2 border-b border-black"
             required
           />
+
+          <!-- Optional but recommended -->
+          <input type="hidden" name="source" value="Notify Me Form" />
+
           <button
             type="submit"
             class="w-full bg-black text-white py-2 rounded hover:opacity-90"

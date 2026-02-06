@@ -104,26 +104,28 @@ if (modal) {
 }
 
 // Service Form
-function openServiceModal(service) {
-  const modal = document.getElementById("consultationModal");
+function openServiceModal(button, service = null) {
+  const modal = button.closest("section").querySelector(".consultationModal");
+
   modal.classList.remove("hidden");
   modal.classList.add("flex");
 
   if (service) {
-    document.getElementById("serviceSelect").value = service;
+    modal.querySelector(".serviceSelect").value = service;
   }
 }
 
-function closeServiceModal() {
-  const modal = document.getElementById("consultationModal");
+function closeServiceModal(button) {
+  const modal = button.closest(".consultationModal");
   modal.classList.add("hidden");
   modal.classList.remove("flex");
 }
 
-function handleContactMode(value) {
-  const phoneInput = document.getElementById("phoneField");
+function handleContactMode(select) {
+  const modal = select.closest(".consultationModal");
+  const phoneInput = modal.querySelector(".phoneField");
 
-  if (value === "Phone") {
+  if (select.value === "Phone") {
     phoneInput.classList.remove("hidden");
     phoneInput.required = true;
   } else {
