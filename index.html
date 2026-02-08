@@ -23,6 +23,7 @@
 
     <title>UE & CO</title>
   </head>
+
   <body>
     <main class="font-apple-system">
       <header
@@ -52,12 +53,12 @@
 
       <!--1st Hero Section-->
       <section
-        class="flex items-center justify-between h-screen md:px-8 md:pb-20 gap-8"
+        class="flex items-center justify-between h-[90vh] md:h-screen md:px-8 md:pb-20 gap-8"
       >
         <!-- Video -->
         <video
           src="./Images/UE & CO.mp4"
-          class="relative top-4 h-[86vh] w-[90vw] md:w-[640px] md:h-[445px] object-cover rounded-xl md:shadow-lg mx-auto"
+          class="relative top-10 h-[86vh] w-[90vw] md:w-[640px] md:h-[445px] object-cover rounded-xl md:shadow-lg mx-auto"
           autoplay
           loop
           playsinline
@@ -81,7 +82,7 @@
       </section>
 
       <!--About Us-->
-      <section class="mt-15 md:mt-0 py-12 px-4 max-w-7xl mx-auto text-center">
+      <section class="py-12 px-4 max-w-7xl mx-auto text-center">
         <div
           class="md:flex md:items-center md:justify-center md:gap-12 md:relative p-6"
         >
@@ -89,6 +90,14 @@
           <div
             class="hidden md:block absolute -top-24 left-1/2 -translate-x-1/2 w-[90%] h-40 bg-gradient-to-b from-[#f3f1ec] to-transparent pointer-events-none"
           ></div>
+
+          <!-- Text -->
+          <p
+            class="md:hidden mt-10 max-w-md mx-auto text-[#66371b] text-sm md:text-xl leading-relaxed md:text-left md:px-8 relative z-20 mb-10"
+          >
+            We specialize in styling, curation, and fashion consultancy. Our
+            goal is to make fashion accessible, stylish, and impactful.
+          </p>
 
           <!-- Image -->
           <img
@@ -100,7 +109,7 @@
 
           <!-- Text -->
           <p
-            class="mt-10 max-w-md mx-auto text-[#66371b] text-sm md:text-xl leading-relaxed md:text-left md:px-8 relative z-20"
+            class="hidden md:block mt-10 max-w-md mx-auto text-[#66371b] text-sm md:text-xl leading-relaxed md:text-left md:px-8 relative z-20"
           >
             We specialize in styling, curation, and fashion consultancy. Our
             goal is to make fashion accessible, stylish, and impactful.
@@ -131,11 +140,7 @@
 
             <h3 class="text-lg font-semibold mb-4">Book a Consultation</h3>
 
-            <form
-              action="https://formspree.io/f/mzdegnqb"
-              method="POST"
-              class="space-y-4"
-            >
+            <form class="space-y-4 email-form" data-template="booking">
               <input
                 type="hidden"
                 name="_subject"
@@ -410,11 +415,7 @@
           Get exclusive fashion updates and styling tips from UE&CO.
         </p>
 
-        <form
-          class="space-y-3"
-          action="https://formspree.io/f/mzdegnqb"
-          method="POST"
-        >
+        <form class="email-form space-y-3" data-template="notify">
           <input
             type="text"
             name="name"
@@ -431,17 +432,17 @@
             required
           />
 
-          <!-- Optional but recommended -->
           <input type="hidden" name="source" value="Notify Me Form" />
 
           <button
             type="submit"
             class="w-full bg-black text-white py-2 rounded hover:opacity-90"
           >
-            Notify Me
+            Subscribe
           </button>
         </form>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   </body>
 </html>

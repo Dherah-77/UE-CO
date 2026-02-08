@@ -134,3 +134,45 @@ function handleContactMode(select) {
     phoneInput.value = "";
   }
 }
+
+(function () {
+  emailjs.init("9cPsuWAa5iB2Sun2vu9rU");
+})();
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".email-form").forEach((form) => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const templateType = this.dataset.template;
+
+      let templateId = "";
+
+      if (templateType === "booking") {
+        templateId = "template_y2lb9zr";
+      }
+
+      if (templateType === "notify") {
+        templateId = "template_yo9sgjm";
+      }
+
+      emailjs.sendForm("service_928nnmv", templateId, this).then(
+        () => {
+          alert("Message sent successfully!");
+          this.reset();
+        },
+        (error) => {
+          console.error(error);
+          alert("Failed to send message. Please try again.");
+        },
+      );
+    });
+  });
+});
+
+// action="https://formspree.io/f/mzdegnqb"
+// method="POST"
+// action="https://formspree.io/f/mzdegnqb"
+// method="POST"
+//  action="https://formspree.io/f/mzdegnqb"
+//  method="POST"
