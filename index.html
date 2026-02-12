@@ -142,7 +142,11 @@
 
             <h3 class="text-lg font-semibold mb-4">Book a Consultation</h3>
 
-            <form class="space-y-4 email-form" data-template="booking">
+            <form
+              class="ajax-form space-y-4"
+              action="https://formspree.io/f/mzdegnqb"
+              method="POST"
+            >
               <input
                 type="hidden"
                 name="_subject"
@@ -417,7 +421,11 @@
           Get exclusive fashion updates and styling tips from UE&CO.
         </p>
 
-        <form class="email-form space-y-3" data-template="notify">
+        <form
+          class="ajax-form email-form space-y-3"
+          action="https://formspree.io/f/mzdegnqb"
+          method="POST"
+        >
           <input
             type="text"
             name="name"
@@ -438,7 +446,7 @@
 
           <button
             type="submit"
-            class="w-full bg-black text-white py-2 rounded hover:opacity-90"
+            class="w-full bg-[#666] text-white py-2 rounded hover:opacity-90"
           >
             Subscribe
           </button>
