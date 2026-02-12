@@ -135,44 +135,21 @@ function handleContactMode(select) {
   }
 }
 
-(function () {
-  emailjs.init("9cPsuWAa5iB2Sun2vu9rU");
-})();
+document.querySelectorAll(".ajax-form").forEach((form) => {
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // STOP redirect
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".email-form").forEach((form) => {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const templateType = this.dataset.template;
-
-      let templateId = "";
-
-      if (templateType === "booking") {
-        templateId = "template_y2lb9zr";
-      }
-
-      if (templateType === "notify") {
-        templateId = "template_yo9sgjm";
-      }
-
-      emailjs.sendForm("service_928nnmv", templateId, this).then(
-        () => {
-          alert("Message sent successfully!");
-          this.reset();
-        },
-        (error) => {
-          console.error(error);
-          alert("Failed to send message. Please try again.");
-        },
-      );
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
     });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      form.reset();
+    } else {
+      alert("Failed to send message. Please try again.");
+    }
   });
 });
-
-// action="https://formspree.io/f/mzdegnqb"
-// method="POST"
-// action="https://formspree.io/f/mzdegnqb"
-// method="POST"
-//  action="https://formspree.io/f/mzdegnqb"
-//  method="POST"
